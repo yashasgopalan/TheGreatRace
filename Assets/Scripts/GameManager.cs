@@ -31,10 +31,13 @@ public class GameManager : MonoBehaviour
 
     void ConvertToMMSS()
     {
-        countDown -= Time.deltaTime;
+        countDown = Mathf.Max(0, countDown - Time.deltaTime);
         int minutes = Mathf.FloorToInt(countDown / 60);
         int seconds = Mathf.FloorToInt(countDown % 60);
 
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (timerText != null)
+        {
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
     }
 }
