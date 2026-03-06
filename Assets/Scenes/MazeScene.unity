@@ -1131,6 +1131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce174e6b7944346e59182776a1b9ef42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  sceneName: MazeScene
+  gameStarted: 0
   timerText: {fileID: 0}
   itemsCollected: {fileID: 0}
   buttonCanvas: {fileID: 0}
@@ -2240,7 +2242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 929579321}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1373341320}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &929579321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2685,7 +2699,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1241443721}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1373341320}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1241443721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3609,6 +3635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce174e6b7944346e59182776a1b9ef42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonController
+  sceneName: MazeScene
+  gameStarted: 0
   timerText: {fileID: 1325246999}
   itemsCollected: {fileID: 0}
   buttonCanvas: {fileID: 588456493}

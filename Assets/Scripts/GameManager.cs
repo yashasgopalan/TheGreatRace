@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         //TODO: Disable Player MOVEMENT
     }
 
-    void StartGame()
+    public void StartGame()
     {
         gameStarted = true;
 
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         buttonCanvas.gameObject.SetActive(false);
     }
 
-    void Retry()
+    public void Retry()
     {
         SceneManager.LoadScene(sceneName);
     }
