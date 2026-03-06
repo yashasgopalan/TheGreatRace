@@ -3603,7 +3603,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1373341319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73442eba3407b4171ad886e5e22771de, type: 3}
+  m_Script: {fileID: 11500000, guid: ce174e6b7944346e59182776a1b9ef42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonController
 --- !u!4 &1373341321
