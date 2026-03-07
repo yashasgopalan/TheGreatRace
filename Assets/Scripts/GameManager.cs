@@ -14,8 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI itemsCollected;
 
     [Header("Button Canvas Data")]
-    [SerializeField] Canvas buttonCanvas;
+    [SerializeField] Canvas startCanvas;
     [SerializeField] Button startButton;
+    [SerializeField] Canvas retryCanvas;
     [SerializeField] Button retryButton;
 
     [TooltipAttribute("A value of 1 is equal to 1s. If you need 10s you input 10.")]
@@ -44,7 +45,6 @@ public class GameManager : MonoBehaviour
 
         if(countDown <= 0)
         {   
-            //TODO: Enabled Retry UI(MUST HAVE)
             SetRetryUI();
 
             //TODO: Stop PlayerMovement and enable Retry UI(NICE TO HAVE)
@@ -65,11 +65,11 @@ public class GameManager : MonoBehaviour
     {
         gameStarted = false;
 
-        buttonCanvas.gameObject.SetActive(true);
-
-        retryButton.gameObject.SetActive(false);
-
+        startCanvas.gameObject.SetActive(true);
         startButton.gameObject.SetActive(true);
+
+        retryCanvas.gameObject.SetActive(false);
+        retryButton.gameObject.SetActive(false);
 
         //TODO: Disable Player MOVEMENT
     }
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
 
         //TODO: Enable Player MOVEMENT
         startButton.gameObject.SetActive(false);
-        buttonCanvas.gameObject.SetActive(false);
+        startCanvas.gameObject.SetActive(false);
     }
 
     public void Retry()
@@ -90,10 +90,10 @@ public class GameManager : MonoBehaviour
 
     void SetRetryUI()
     {
-        buttonCanvas.gameObject.SetActive(true);
+        startCanvas.gameObject.SetActive(true);
+        startButton.gameObject.SetActive(true);
 
-        startButton.gameObject.SetActive(false);
-
-        retryButton.gameObject.SetActive(true);
+        retryCanvas.gameObject.SetActive(false);
+        retryButton.gameObject.SetActive(false);
     }
 }
