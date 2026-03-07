@@ -2405,7 +2405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit.Samples.StarterAssets::GitaLiveStreamer
   scaleFactor: 0.333
   updateRate: 10
-  laptopIP: 10.34.163.45
+  laptopIP: 10.30.136.63
   port: 8888
 --- !u!114 &1119237790
 MonoBehaviour:
@@ -3497,6 +3497,10 @@ PrefabInstance:
     - target: {fileID: 2368631517992226211, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_UseDistanceBasedVelocityScaling
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556648708419447538, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_SmoothTurnEnabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2763817294847212894, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_CastDistance

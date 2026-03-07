@@ -212,7 +212,7 @@ public class GitaLiveStreamer : MonoBehaviour
     private Vector3 startPosition;
     
     [Header("Network Streaming")]
-    public string laptopIP = "10.34.163.45";
+    public string laptopIP = "10.30.136.63"; 
     public int port = 8888;
     
     private float updateTimer;
