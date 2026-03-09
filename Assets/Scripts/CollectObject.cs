@@ -39,7 +39,7 @@ public class CollectObject : MonoBehaviour
         }
 
         //TODO: SWAP deactivate with some other change
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
 
         isGrabbing = false;
     }

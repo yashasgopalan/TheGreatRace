@@ -4498,6 +4498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maze_wavy
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: bb0222455af234b3faea6cd1eea45e67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -2,9 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Input Acions Data")]
+    [SerializeField] InputAction inputactions;
+    
     [Header("Scene Change Data")]
     [SerializeField] string sceneName = "MazeScene";
     [SerializeField] bool gameStarted = false;
@@ -45,6 +49,7 @@ public class GameManager : MonoBehaviour
 
         if(countDown <= 0)
         {   
+
             SetRetryUI();
 
             //TODO: Stop PlayerMovement and enable Retry UI(NICE TO HAVE)
