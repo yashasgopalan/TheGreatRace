@@ -6,8 +6,9 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Input Acions Data")]
-    [SerializeField] InputAction inputactions;
+    [Header("Input Actions Data")]
+    [SerializeField] XRIDefaultInputActions inputActions;
+    // [SerializeField] InputActionAsset inputactions;
     
     [Header("Scene Change Data")]
     [SerializeField] string sceneName = "MazeScene";
@@ -49,10 +50,8 @@ public class GameManager : MonoBehaviour
 
         if(countDown <= 0)
         {   
-
-            SetRetryUI();
-
             //TODO: Stop PlayerMovement and enable Retry UI(NICE TO HAVE)
+            SetRetryUI();
             return;
         }
 
@@ -77,6 +76,7 @@ public class GameManager : MonoBehaviour
         retryButton.gameObject.SetActive(false);
 
         //TODO: Disable Player MOVEMENT
+        inputActions.XRILeftLocomotion.Move.Disable();
     }
 
     public void StartGame()
@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
         gameStarted = true;
 
         //TODO: Enable Player MOVEMENT
+        inputActions.XRILeftLocomotion.Move.Enable();
         startButton.gameObject.SetActive(false);
         startCanvas.gameObject.SetActive(false);
     }
@@ -95,6 +96,8 @@ public class GameManager : MonoBehaviour
 
     void SetRetryUI()
     {
+        inputActions.XRILeftLocomotion.Move.Disable();
+
         startCanvas.gameObject.SetActive(true);
         startButton.gameObject.SetActive(true);
 
