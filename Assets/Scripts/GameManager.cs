@@ -7,9 +7,9 @@ using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     [Header("Input Actions Data")]
-    [SerializeField] XRIDefaultInputActions inputActions;
-    // [SerializeField] InputActionAsset inputactions;
-    
+    // [SerializeField] InputActionAsset action;
+    [SerializeField] InputActionAsset inputActions;
+    [SerializeField] GameObject XR_Hands;
     [Header("Scene Change Data")]
     [SerializeField] string sceneName = "MazeScene";
     [SerializeField] bool gameStarted = false;
@@ -20,9 +20,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Button Canvas Data")]
     [SerializeField] Canvas startCanvas;
-    [SerializeField] Button startButton;
+    [SerializeField] GameObject startButton;
     [SerializeField] Canvas retryCanvas;
-    [SerializeField] Button retryButton;
+    [SerializeField] GameObject retryButton;
 
     [TooltipAttribute("A value of 1 is equal to 1s. If you need 10s you input 10.")]
     [SerializeField] private float timer = 180.0f;
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         retryButton.gameObject.SetActive(false);
 
         //TODO: Disable Player MOVEMENT
-        inputActions.XRILeftLocomotion.Move.Disable();
+        // inputActions.
     }
 
     public void StartGame()
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         gameStarted = true;
 
         //TODO: Enable Player MOVEMENT
-        inputActions.XRILeftLocomotion.Move.Enable();
+        // inputActions.XRILeftLocomotion.Move.Enable();
         startButton.gameObject.SetActive(false);
         startCanvas.gameObject.SetActive(false);
     }
@@ -99,12 +99,14 @@ public class GameManager : MonoBehaviour
 
     void SetRetryUI()
     {
-        inputActions.XRILeftLocomotion.Move.Disable();
+        // inputActions.XRILeftLocomotion.Move.Disable();
 
-        startCanvas.gameObject.SetActive(true);
-        startButton.gameObject.SetActive(true);
+        startCanvas.gameObject.SetActive(false);
+        startButton.gameObject.SetActive(false);
 
-        retryCanvas.gameObject.SetActive(false);
-        retryButton.gameObject.SetActive(false);
+
+        retryCanvas.transform.position = XR_Hands.transform.position + new Vector3(-2.2f,0.0f,0.0f);
+        retryCanvas.gameObject.SetActive(true);
+        retryButton.gameObject.SetActive(true);
     }
 }
