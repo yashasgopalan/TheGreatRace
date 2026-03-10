@@ -734,6 +734,11 @@ MonoBehaviour:
   collectionDelay: 2
   collectedAudioClip: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!1 &417271564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 781630661673262138, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
+  m_PrefabInstance: {fileID: 1659808033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &421334953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4140,9 +4145,9 @@ MonoBehaviour:
   timerText: {fileID: 1325246999}
   itemsCollected: {fileID: 0}
   startCanvas: {fileID: 588456493}
-  startButton: {fileID: 0}
+  startButton: {fileID: 417271564}
   retryCanvas: {fileID: 958553212}
-  retryButton: {fileID: 0}
+  retryButton: {fileID: 1999317882}
   timer: 180
 --- !u!4 &1373341321
 Transform:
@@ -5232,6 +5237,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.25, y: 2.1336, z: 0.024999695}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1999317882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 781630661673262138, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
+  m_PrefabInstance: {fileID: 2114372914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2029394414
 GameObject:
   m_ObjectHideFlags: 0
