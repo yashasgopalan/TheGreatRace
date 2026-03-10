@@ -39,7 +39,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         ConvertToMMSS();
+
     }
+
+    
 
     void ConvertToMMSS()
     {
